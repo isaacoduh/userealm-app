@@ -1,6 +1,9 @@
 {
   "extends": "./jsconfig.paths.json",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   }
 }
