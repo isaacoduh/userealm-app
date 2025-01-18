@@ -1,8 +1,9 @@
 import axios from '@services/axios';
 
 class AuthService {
-  async signup(body) {
+  async signUp(body) {
     const response = await axios.post('/signup', body);
+    return response;
   }
 
   async signIn(body) {

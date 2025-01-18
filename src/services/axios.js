@@ -3,7 +3,7 @@ export let BASE_ENDPOINT = '';
 
 export const APP_ENVIRONMENT = 'development';
 
-if (APP_ENVIRONMENT === 'local') {
+if (process.env.REACT_APP_ENVIRONMENT === 'local') {
   BASE_ENDPOINT = 'http://localhost:5600';
 }
 
