@@ -20,7 +20,7 @@ import {
   FaRegBell,
   FaRegUser
 } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 const posts = [
   { id: 1, author: 'John Doe', content: 'Just had an amazing day at the beach!', avatar: '/avatars/01.png' },
@@ -115,6 +115,7 @@ const Home = () => {
             </div>
           </nav>
           <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
+            <Outlet />
             <div className="container mx-auto px-6 py-8">
               <div className="space-y-4">
                 {posts.map((post) => (

@@ -8,6 +8,7 @@ class UserService {
 
   async logoutUser() {
     const response = await axios.get('/signout');
+    return response;
   }
 
   async checkCurrentUser() {
@@ -27,6 +28,7 @@ class UserService {
 
   async getUserProfileByUserId(userId) {
     const response = await axios.get(`/user/profile/${userId}`);
+    return response;
   }
 
   async getUserProfileByUsername(username, userId, uId) {

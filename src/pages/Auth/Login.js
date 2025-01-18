@@ -37,8 +37,9 @@ const Login = () => {
       setStoredUsername(username);
       setHasError(false);
       setAlertType('alert-success');
-      Utils.dispatch(result, pageReload, dispatch, setUser);
+      Utils.dispatchUser(result, pageReload, dispatch, setUser);
     } catch (error) {
+      console.log(error);
       setLoading(false);
       setHasError(true);
       setAlertType('alert-error');
@@ -48,7 +49,7 @@ const Login = () => {
 
   useEffect(() => {
     if (loading && !user) return;
-    if (user) navigate('/home');
+    if (user) navigate('/app/home');
   }, [loading, user, navigate]);
 
   return (
